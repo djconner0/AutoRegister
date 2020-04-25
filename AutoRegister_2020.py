@@ -73,6 +73,9 @@ while 1 < 2:
         RegButt.click()
 
         # Here's the count variable, it breaks the loop
-
+        # It sleeps to make your computer chill out, or at least mine
+        # 10s won't make a difference since it takes around 5s to
+        # open and log in assuming ok speeds
+    time.sleep(10)
     if i >= 5:
         break

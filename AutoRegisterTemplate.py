@@ -12,7 +12,7 @@ TdDate = datetime.now().strftime("%m-%d %H:%M")
 RegistDate = "MM-DD HH:MM"
 # Loop to check set time for when to login and navigate to
 # registration page. 
-while 1 < 2:
+while i < 5:
 
     if TdDate == RegistDate:
 
@@ -71,8 +71,3 @@ while 1 < 2:
 
         RegButt = driver.find_element_by_xpath('/html/body/div[3]/form/input[1]')
         RegButt.click()
-
-        # Here's the count variable, it breaks the loop
-
-    if i >= 5:
-        break

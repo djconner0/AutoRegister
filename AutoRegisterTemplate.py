@@ -71,3 +71,7 @@ while i < 5:
 
         RegButt = driver.find_element_by_xpath('/html/body/div[3]/form/input[1]')
         RegButt.click()
+
+    #This sleeps to play nice with your cpu
+
+    time.sleep(10)

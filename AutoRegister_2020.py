@@ -12,7 +12,7 @@ TdDate = datetime.now().strftime("%m-%d %H:%M")
 RegistDate = "05-04 07:59"
 # Loop to check set time for when to login and navigate to
 # registration page. 
-while 1 < 2:
+while i < 5:
 
     if TdDate == RegistDate:
 
@@ -77,5 +77,3 @@ while 1 < 2:
         # 10s won't make a difference since it takes around 5s to
         # open and log in assuming ok speeds
     time.sleep(10)
-    if i >= 5:
-        break

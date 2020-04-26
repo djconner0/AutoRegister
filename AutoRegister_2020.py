@@ -72,8 +72,6 @@ while i < 5:
         RegButt = driver.find_element_by_xpath('/html/body/div[3]/form/input[1]')
         RegButt.click()
 
-        # Here's the count variable, it breaks the loop
-        # It sleeps to make your computer chill out, or at least mine
-        # 10s won't make a difference since it takes around 5s to
-        # open and log in assuming ok speeds
+    #This sleeps to play nice with your cpu
+    
     time.sleep(10)

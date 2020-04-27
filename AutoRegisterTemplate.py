@@ -2,19 +2,46 @@
 from datetime import datetime
 import time
 from selenium import webdriver
+
 # Defines a count variable used for later
 i = 0
-# TdDate is Today's date, RegistDate is the Register day and
-# however many minutes before Registration you choose to open up
-# the registration page. I use 1 minute for reasons seen below
-# RegistDate NEEDS TO BE CHANGED TO REFLECT SCHEDULE
-TdDate = datetime.now().strftime("%m-%d %H:%M")
-RegistDate = "MM-DD HH:MM"
-# Loop to check set time for when to login and navigate to
+
+#Gets Registration Date
+print('Registration MM-DD:')
+RegistDate = input()
+
+#Gets Registration Time (probably a better way to do this)
+print('Registration HH:')
+RegistHour = input()
+print('Registration MM:')
+RegistMin = input()
+RegistTime = str(RegistHour + ':' + RegistMin)
+if RegistMin == '00':
+    RegistMin = '59'
+else:
+    RegistMin = str(int(RegistMin) - 1)
+
+print(RegistMin)
+
+#Login time
+LoginTime = str(RegistDate + ' ' + RegistHour + ':' + RegistMin)
+print(LoginTime)
+print(RegistTime)
+#Gets Username and Password for login
+print('Charger ID:')
+Username = input()
+print('Password:')
+Password = input()
+
+# Loop to check the time for when to login and navigate to
 # registration page. 
 while i < 5:
 
-    if TdDate == RegistDate:
+    #Gets the current date based on machine time
+    TdDate = datetime.now().strftime("%m-%d %H:%M")
+    print(TdDate)
+
+    if TdDate == LoginTime:
 
         #Points script to Login site
         
@@ -24,11 +51,11 @@ while i < 5:
         #Inserts User and Pass, sleeps because it doesn't like it too fast
         
         ChIDLogin = driver.find_element_by_xpath('//*[@id="username"]')
-        ChIDLogin.send_keys('USERNAME')
+        ChIDLogin.send_keys(Username)
         time.sleep(0.05)
 
         PassLogin = driver.find_element_by_xpath('//*[@id="password"]')
-        PassLogin.send_keys('PASSWORD')
+        PassLogin.send_keys(Password)
 
         # clicks login button
 
@@ -56,18 +83,17 @@ while i < 5:
             # BE EDITED TO REFLECT SCHEDULE
 
             now = datetime.now().time()
-            current_time = now.strftime("%H:%M")
-            regist_time = "HH:MM"
+            CurrentTime = now.strftime("%H:%M")
 
             # This clicks the register button and returns to previous page
 
-            if current_time == regist_time:
+            if CurrentTime == RegistTime:
                 RegButt = driver.find_element_by_xpath('/html/body/div[3]/form/input[1]')
                 RegButt.click()
                 driver.back()
                 i += 1
 
-        #This clicks the register buton one last time
+        #This clicks the register button one last time
 
         RegButt = driver.find_element_by_xpath('/html/body/div[3]/form/input[1]')
         RegButt.click()

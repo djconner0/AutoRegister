@@ -18,15 +18,12 @@ RegistMin = input()
 RegistTime = str(RegistHour + ':' + RegistMin)
 if RegistMin == '00':
     RegistMin = '59'
+    RegistHour = '0' + str(int(RegistHour) - 1)
 else:
     RegistMin = str(int(RegistMin) - 1)
 
-print(RegistMin)
-
 #Login time
 LoginTime = str(RegistDate + ' ' + RegistHour + ':' + RegistMin)
-print(LoginTime)
-print(RegistTime)
 #Gets Username and Password for login
 print('Charger ID:')
 Username = input()
@@ -39,7 +36,6 @@ while i < 5:
 
     #Gets the current date based on machine time
     TdDate = datetime.now().strftime("%m-%d %H:%M")
-    print(TdDate)
 
     if TdDate == LoginTime:
 

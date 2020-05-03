@@ -6,26 +6,6 @@ from selenium import webdriver
 # Defines a count variable used for later
 i = 0
 
-#Gets Registration Date
-print('Registration MM-DD:')
-RegistDate = input()
-
-#Gets Registration Time (probably a better way to do this)
-print('Registration HH:')
-RegistHour = input()
-print('Registration MM:')
-RegistMin = input()
-RegistTime = str(RegistHour + ':' + RegistMin)
-
-#This sets the time for the browser to open
-if RegistMin == '00':
-    RegistMin = '59'
-    RegistHour = '0' + str(int(RegistHour) - 1)
-else:
-    RegistMin = str(int(RegistMin) - 1)
-
-#Login time
-LoginTime = str(RegistDate + ' ' + RegistHour + ':' + RegistMin)
 #Gets Username and Password for login
 print('Charger ID:')
 Username = input()

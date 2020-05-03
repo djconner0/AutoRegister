@@ -11,6 +11,8 @@ How to run it (Windows):
   Run > Run Module
   ps if you can install selenium and the driver on windows... let me know.
 
+  The test script can be run the same way. It just runs the bot when you give it login creds.
+
 
 Prerequisites:
   Python 3

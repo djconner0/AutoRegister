@@ -7,7 +7,7 @@ How to run it (Linux):
   >python3 AutoRegister2020.py
 
 How to run it (Windows):
-  Open it in the python IDLE
+	Open it in the python IDLE
   Run > Run Module
   ps if you can install selenium and the driver on windows... let me know.
 

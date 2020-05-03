@@ -16,6 +16,8 @@ RegistHour = input()
 print('Registration MM:')
 RegistMin = input()
 RegistTime = str(RegistHour + ':' + RegistMin)
+
+#This sets the time for the browser to open
 if RegistMin == '00':
     RegistMin = '59'
     RegistHour = '0' + str(int(RegistHour) - 1)

@@ -1,6 +1,6 @@
 # AutoRegister
 
-This is a simple Python script that logs in and pushes a button.
+This is a simple Python script that logs in and pushes a button. I don't have a way to test on Mac, but I imagine it's similar to a Linux boot.
 
 ## Getting Started
 

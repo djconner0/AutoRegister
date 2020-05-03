@@ -20,7 +20,7 @@ This is a simple Python script that logs in and pushes a button.
 
 ### Prerequisites
 
- [Selenium] (https://www.selenium.dev/)
+ - [Selenium](https://www.selenium.dev/)
 
 ## Running the tests
 
